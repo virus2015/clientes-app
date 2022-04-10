@@ -1,0 +1,50 @@
+<div class="card text-white">
+  <div class="card-header">Tiendas</div>
+  <div class="card-body">
+    <h5 class="card-title">Listado de tiendas</h5>
+
+<div class="my-2 text-left">
+<button class ="btn btn-rounded btn-primary" type="button" [routerLink] ="['/tiendas/form']">Crear Tienda</button>
+</div>
+
+
+  <table class = "table table-bordered table-striped">
+   <thead>
+     <tr>
+      <th>ID TIENDA</th>
+      <th>NOMBRE</th>
+      <th>CIUDAD</th>
+      <th>COLONIA</th>
+      <th>CALLE</th>
+      <th>TELEFONO</th>
+      <th>WEB</th>
+      <th>EDITAR</th>
+     </tr>
+   </thead>
+
+
+
+   <tbody>
+    <tr *ngFor="let imprimeTiendas of tiendas">
+
+      <td>{{imprimeTiendas.idTiendas}}</td>
+      <td>{{imprimeTiendas.nombre}}</td>
+      <td>{{imprimeTiendas.ciudad}}</td>
+      <td>{{imprimeTiendas.colonia}}</td>
+      <td>{{imprimeTiendas.calle}}</td>
+      <td>{{imprimeTiendas.telefono}}</td>
+      <td>{{imprimeTiendas.web}}</td>
+  <td>  <button type="button" name="editar" [routerLink]="['/tiendas/form',imprimeTiendas.idTiendas]" class="btn btn-primary btn-sm">Editar
+       </button>
+  </td>
+
+
+    </tr>
+
+   </tbody>
+
+
+
+</table>
+  </div>
+</div>
